@@ -1,20 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title class="ion-text-center">SkeletonApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Bienvenido!</ion-card-title>
+      <p>Usuario: </p>
+    </ion-card-header>
+    <ion-card-content>
+    <ion-title class="ion-text-center">Informacion adicional</ion-title>
+      <form >
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input ></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input ></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating">Nivel Educación</ion-label>
+          <ion-select aria-label="nivel-ed" placeholder="Seleccione nivel">
+            <ion-select-option value="basico">Basico</ion-select-option>
+            <ion-select-option value="medio">Medio</ion-select-option>
+            <ion-select-option value="universitario">Universitario</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating">Fecha Nacimiento</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <div class="boton">
+        <ion-button fill="outline" size="small">Limpiar</ion-button>
+        <ion-button fill="outline" size="small">Mostrar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p class="ion-text-center">Desarrollado por gvillablanca</p>
+  </ion-toolbar>
+</ion-footer>
