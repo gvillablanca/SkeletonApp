@@ -16,10 +16,9 @@ export class AccessPage implements OnInit {
       'nombre': new FormControl("", Validators.required),
       'password': new FormControl("", Validators.required)
     })
-  
   }
 
   ngOnInit() {
   }
-
+  
 }

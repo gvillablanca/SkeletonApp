@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="ion-text-center">SkeletonApp</ion-title>
+    <ion-title class="ion-text-center"><ion-icon name="skull-outline"></ion-icon>   SkeletonApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,17 +14,17 @@
     <ion-title class="ion-text-center">Informacion adicional</ion-title>
       <form >
         <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Nombre</ion-label>
           <ion-input ></ion-input>
         </ion-item>
         <br>
         <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
+          <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Apellido</ion-label>
           <ion-input ></ion-input>
         </ion-item>
         <br>
         <ion-item>
-          <ion-label position="floating">Nivel Educación</ion-label>
+          <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Nivel Educación</ion-label>
           <ion-select aria-label="nivel-ed" placeholder="Seleccione nivel">
             <ion-select-option value="basico">Basico</ion-select-option>
             <ion-select-option value="medio">Medio</ion-select-option>
@@ -33,7 +33,7 @@
         </ion-item>
         <br>
         <ion-item>
-          <ion-label position="floating">Fecha Nacimiento</ion-label>
+          <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Fecha Nacimiento</ion-label>
           <ion-input type="date"></ion-input>
         </ion-item>
       </form>
@@ -41,6 +41,7 @@
       <div class="boton">
         <ion-button fill="outline" size="small">Limpiar</ion-button>
         <ion-button fill="outline" size="small">Mostrar</ion-button>
+        <ion-button fill="outline" size="small" [routerLink]="['/access']">Salir</ion-button>
       </div>
     </ion-card-content>
   </ion-card>
