@@ -12,15 +12,15 @@
     </ion-card-header>
     <ion-card-content>
     <ion-title class="ion-text-center">Informacion adicional</ion-title>
-      <form >
+      <form [formGroup]="formularioHome">
         <ion-item>
           <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Nombre</ion-label>
-          <ion-input ></ion-input>
+          <ion-input formControlName="nombreHome"></ion-input>
         </ion-item>
         <br>
         <ion-item>
           <ion-label position="floating"><ion-icon name="caret-forward-outline"></ion-icon> Apellido</ion-label>
-          <ion-input ></ion-input>
+          <ion-input formControlName="apellido"></ion-input>
         </ion-item>
         <br>
         <ion-item>
@@ -40,7 +40,7 @@
       <br>
       <div class="boton">
         <ion-button fill="outline" size="small">Limpiar</ion-button>
-        <ion-button fill="outline" size="small">Mostrar</ion-button>
+        <ion-button fill="outline" size="small" (click)="limpiarForm">Mostrar</ion-button>
         <ion-button fill="outline" size="small" [routerLink]="['/access']">Salir</ion-button>
       </div>
     </ion-card-content>
