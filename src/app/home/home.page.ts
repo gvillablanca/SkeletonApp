@@ -31,7 +31,7 @@ export class HomePage {
         }
       };
 
-      this.presentAlert("Bienvenid@ "+ this.nombre.toUpperCase+ " " + this.apellido.toUpperCase + " a SkeletonApp");
+      this.presentAlert("Bienvenid@ "+ this.nombre+ " " + this.apellido+ " a SkeletonApp");
 
       this.router.navigate(['/profile'], navigationExtras)
     }
