@@ -35,8 +35,8 @@ export class AccessPage implements OnInit {
       this.presentAlert("Complete todos los campos porfavor");
       return false;
     }
-    else if(pass.length >4){
-      this.presentAlert("contraseña menor o igual a 4");
+    else if(pass.length >4 ){
+      this.presentAlert("contraseña debe ser numerica y no mas de 4 digitos");
       return false;
     }
     else{

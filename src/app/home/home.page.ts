@@ -40,8 +40,6 @@ export class HomePage {
     }
   }
 
-  limpiarForm(){}
-
   async presentAlert(msj: string) {
     const alert = await this.alertController.create({
       header: 'Saludos!',
