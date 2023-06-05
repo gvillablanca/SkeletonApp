@@ -6,26 +6,26 @@
 
 <ion-content >
   <ion-card >
-    <ion-card-header>
-      <ion-card-title class="ion-text-center subtitulo">Bienvenido!</ion-card-title>
-      <p class="labels">Usuario: </p>
-    </ion-card-header>
     <ion-card-content>
-    <ion-title class="ion-text-center labels">Informacion adicional</ion-title>
-      <form [formGroup]="formularioHome">
+    <ion-title class="ion-text-center labels">Registro</ion-title>
         <ion-item>
           <ion-label position="floating" class="labels"><ion-icon name="caret-forward-outline"></ion-icon> Nombre</ion-label>
-          <ion-input formControlName="nombreHome"></ion-input>
+          <ion-input [(ngModel)]="nombre"></ion-input>
         </ion-item>
         <br>
         <ion-item>
           <ion-label position="floating" class="labels"><ion-icon name="caret-forward-outline"></ion-icon> Apellido</ion-label>
-          <ion-input formControlName="apellido"></ion-input>
+          <ion-input [(ngModel)]="apellido"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating" class="labels"><ion-icon name="caret-forward-outline"></ion-icon> Email</ion-label>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
         </ion-item>
         <br>
         <ion-item>
           <ion-label position="floating" class="labels"><ion-icon name="caret-forward-outline"></ion-icon> Nivel Educación</ion-label>
-          <ion-select aria-label="nivel-ed" placeholder="Seleccione nivel">
+          <ion-select aria-label="nivel-ed" placeholder="Seleccione nivel" [(ngModel)]="nivelEstudios">
             <ion-select-option value="basico">Basico</ion-select-option>
             <ion-select-option value="medio">Medio</ion-select-option>
             <ion-select-option value="universitario">Universitario</ion-select-option>
@@ -34,18 +34,18 @@
         <br>
         <ion-item>
           <ion-label class="labels"><ion-icon name="caret-forward-outline"></ion-icon> Fecha Nacimiento</ion-label>
-          <ion-input type="date"></ion-input>
+          <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
         </ion-item>
-      </form>
       <br>
       <div class="boton">
-        <ion-button fill="outline" size="small" class="labels">Limpiar</ion-button>
-        <ion-button fill="outline" size="small" (click)="limpiarForm" class="labels">Mostrar</ion-button>
+        <ion-button fill="outline" size="small" class="labels" (click)="limpiarForm">Limpiar</ion-button>
+        <ion-button fill="outline" size="small" class="labels" (click)="registrar()">Registrar</ion-button>
         <ion-button fill="outline" size="small" [routerLink]="['/access']" class="labels">Salir</ion-button>
       </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
+
 <ion-footer class="ion-no-border">
   <ion-toolbar color="dark">
     <p class="ion-text-center normal">Desarrollado por gvillablanca</p>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+     <ion-title class="ion-text-center titulo-principal"><span class="skeleton">N</span>    SkeletonApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title class="ion-text-center labels">Inicio</ion-title>
+  <p class="ion-text-center labels"> Logeado como: {{ usuarioHome }}</p>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://images8.alphacoders.com/129/1292768.jpg" />
+    <ion-card-content>
+     <ion-button expand="full" class="labels" [routerLink]="['/profile']">Perfil usuario</ion-button>
+    </ion-card-content>
+  </ion-card>
+    <ion-card>
+   <img alt="Silhouette of mountains" src="https://a-static.besthdwallpaper.com/marking-the-calendar-for-2021-agenda-with-chocolate-and-coffee-wallpaper-2560x1600-60469_7.jpg" />
+    <ion-card-content>
+     <ion-button expand="full" class="labels" [routerLink]="['/calendar']">Calendario</ion-button>
+    </ion-card-content>
+  </ion-card>
+    <ion-card>
+    <ion-card-content>
+     <ion-button expand="full" class="labels" [routerLink]="['/access']">Salir</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <p class="ion-text-center normal">Desarrollado por gvillablanca</p>
+  </ion-toolbar>
+</ion-footer>

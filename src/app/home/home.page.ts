@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +9,46 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public alertButtons = ['OK'];
 
-  formularioHome: FormGroup;
+  nombre: string = "";
+  apellido: string = "";
+  email: string = "";
+  nivelEstudios: string = "";
+  fechaNacimiento: string = "";
 
-  constructor(public fb: FormBuilder) {
-    this.formularioHome = this.fb.group({
-      'nombreHome': new FormControl("", Validators.required),
-      'apellido': new FormControl("", Validators.required)
-    });
+  constructor(private activerouter: ActivatedRoute, private router: Router, private alertController: AlertController) { }
+
+  registrar(){
+    if(this.nombre.valueOf()!="" || this.apellido.valueOf()!="" || this.email.valueOf()!=""|| this.nivelEstudios.valueOf()!="" || this.fechaNacimiento.valueOf()!=""){
+      let navigationExtras: NavigationExtras ={
+        state: {
+          nombre: this.nombre,
+          apellido: this.apellido,
+          email: this.email,
+          nivelEstudios: this.nivelEstudios,
+          fechaNacimiento: this.fechaNacimiento
+        }
+      };
+
+      this.presentAlert("Bienvenid@ "+ this.nombre.toUpperCase+ " " + this.apellido.toUpperCase + " a SkeletonApp");
+
+      this.router.navigate(['/profile'], navigationExtras)
+    }
+    else{
+      this.presentAlert("Complete todos los datos porfavor");
+    }
   }
 
-  limpiarForm(){
-    console.log("holitos");
-    this.formularioHome["controls"]["nombreHome"].reset();
+  limpiarForm(){}
+
+  async presentAlert(msj: string) {
+    const alert = await this.alertController.create({
+      header: 'Saludos!',
+      message: msj,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 }

@@ -1,37 +1,34 @@
-<ion-header [translucent]="true" class="ion-no-border" >
+<ion-header [translucent]="true" >
   <ion-toolbar color="dark">
     <ion-title class="ion-text-center titulo-principal"><span class="skeleton">N</span>    SkeletonApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="ion-padding ion-text-center">Aqui comienza todo</div>
+  <div class="ion-padding ion-text-center labels">Aqui comienza todo</div>
   <ion-card>
     <ion-card-header>
       <ion-card-title class="ion-text-center subtitulo">Bienvenido!</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form [formGroup]="formularioLogin">
         <ion-item>
-          <ion-label position="floating" class="labels"><ion-icon name="person-outline"></ion-icon> Usuario</ion-label>
-          <ion-input formControlName="nombre" ></ion-input>
+          <ion-label position="floating" class="labels"><ion-icon name="person-outline" ></ion-icon> Usuario</ion-label>
+          <ion-input [(ngModel)]="usuario" placeholder="example@mail.com"></ion-input>
         </ion-item>
         <br>
         <ion-item>
           <ion-label position="floating" class="labels"><ion-icon name="key-outline"></ion-icon> Password</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-input type="password" [(ngModel)]="clave"></ion-input>
         </ion-item>
-      </form>
       <br>
-      <!--<ion-button expand="full" [routerLink]="['/home']">Ingresar</ion-button>-->
       <ion-button expand="full" (click)="logeado()" class="labels">Ingresar</ion-button>
       <br>
-      <a href="#" [routerLink]="['/registro']" class="labels">Crear tu cuenta gratis</a>
+      <a href="#" [routerLink]="['/home']" class="labels">Crear tu cuenta gratis</a>
     </ion-card-content>
   </ion-card>
 </ion-content>
 
-<ion-footer class="ion-no-border">
+<ion-footer class="ion-no-border" collapse="fade">
   <ion-toolbar color="dark">
     <p class="ion-text-center normal">Desarrollado por gvillablanca</p>
   </ion-toolbar>

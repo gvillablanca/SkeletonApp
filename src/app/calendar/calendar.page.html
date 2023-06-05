@@ -1,0 +1,26 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+     <ion-title class="ion-text-center titulo-principal"><span class="skeleton">N</span>    SkeletonApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title class="ion-text-center subtitulo">Calendario</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-datetime [isDateEnabled]="isWeekday"></ion-datetime>
+  </ion-card-content>
+
+  <ion-button fill="outline" expand="full" class="labels"  [routerLink]="['/menu']">Inicio</ion-button>
+  <ion-button fill="outline" expand="full" class="labels" [routerLink]="['/access']">Salir</ion-button>
+</ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <p class="ion-text-center normal">Desarrollado por gvillablanca</p>
+  </ion-toolbar>
+</ion-footer>
